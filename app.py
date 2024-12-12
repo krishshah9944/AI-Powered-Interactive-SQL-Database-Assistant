@@ -28,7 +28,8 @@ if radio_opt.index(selected_opt)==1:
 else:
     db_uri=LOCALDB
 
-api_key=st.sidebar.text_input(label="GRoq API Key",type="password")
+## api_key=st.sidebar.text_input(label="GRoq API Key",type="password")
+api_key=st.secrets["GROQ_API_KEY"]
 
 if not db_uri:
     st.info("Please enter the database information and uri")
